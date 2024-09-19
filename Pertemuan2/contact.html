@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Indah</title>
+        <!-- note: kalo di dalamnya ada atribut bawaan (kaya link) ditutupnya gaperlu terpisah (kaya title) -->
+        <link rel="stylesheet" href="style.css" /> 
+    </head>
+    <body>
+        <div class="container">
+        <!-- NAVIGATION BAR -->
+        <div class="container-navbar">
+            <ul class="ul-navbar">
+                <li class="li-navbar">
+                    <a href="index.html" class="a-navbar">HOME</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="about.html" class="a-navbar">ABOUT ME</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="contact.html" class="a-navbar">CONTACT ME</a>
+                </li>
+            </ul>
+        </div>
+        <!-- NAVIGATION BAR SELESAI -->
+
+            <!-- CONTENT 1 -->
+            <div class="container-content">
+                <h1>Formulir Kontak</h1>
+                <form action="submit_form.php" method="POST">
+                    <!-- Nama -->
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" required><br><br>
+
+                    <!-- Kewarganegaraan -->
+                    <label>Kewarganegaraan:</label><br>
+                    <input type="radio" id="wni" name="kewarganegaraan" value="WNI" required>
+                    <label for="wni">WNI</label><br>
+                    <input type="radio" id="wna" name="kewarganegaraan" value="WNA" required>
+                    <label for="wna">WNA</label><br><br>
+
+                    <!-- Layanan -->
+                    <label>Layanan:</label><br>
+                    <input type="checkbox" id="website" name="layanan[]" value="Website">
+                    <label for="website">Website</label><br>
+                    <input type="checkbox" id="hosting" name="layanan[]" value="Hosting">
+                    <label for="hosting">Hosting</label><br><br>
+
+                    <!-- Tombol Kirim dan Reset -->
+                    <input type="submit" value="Kirim">
+                    <input type="reset" value="Reset">
+                </form>
+            </div>
+            <!-- CONTENT 1 END -->
+
+        <!-- FOOTER -->
+        <div class="container-footer">
+            <h1 class="h1-footer">Dibuat oleh: Anggi Saputri_2022071042</h1>
+        <!-- FOOTER END -->    
+    </div>
+    </body>
+</html>
