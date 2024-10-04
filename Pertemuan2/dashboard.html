@@ -1,131 +1,136 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website Berita</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        /* CSS Internal */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        nav {
-            background-color: #333;
-            padding: 15px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            padding: 20px;
-            flex-grow: 1;
-        }
-        .content {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .content img {
-            width: 200px;
-            height: 200px;
-            margin-right: 20px;
-        }
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        /* Content Hiding */
-        #about-content {
-            display: none;
-        }
+      /* CSS Internal */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      nav {
+        background-color: #333;
+        padding: 15px;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        margin: 0 20px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .container {
+        padding: 20px;
+        flex-grow: 1;
+      }
+      .content {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .content img {
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+      }
+      .footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+      .footer a {
+        color: white;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+      /* Content Hiding */
+      #about-content {
+        display: none;
+      }
     </style>
     <script>
-        // JavaScript untuk menampilkan konten berdasarkan navbar yang diklik
-        function showContent(contentId) {
-            const homeContent = document.getElementById("home-content");
-            const aboutContent = document.getElementById("about-content");
-            if (contentId === "home") {
-                homeContent.style.display = "block";
-                aboutContent.style.display = "none";
-            } else if (contentId === "about") {
-                homeContent.style.display = "none";
-                aboutContent.style.display = "block";
-            }
+      // JavaScript untuk menampilkan konten berdasarkan navbar yang diklik
+      function showContent(contentId) {
+        const homeContent = document.getElementById('home-content');
+        const aboutContent = document.getElementById('about-content');
+        if (contentId === 'home') {
+          homeContent.style.display = 'block';
+          aboutContent.style.display = 'none';
+        } else if (contentId === 'about') {
+          homeContent.style.display = 'none';
+          aboutContent.style.display = 'block';
         }
+      }
     </script>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Navbar -->
     <nav>
-        <a href="#home" onclick="showContent('home')">Home</a>
-        <a href="#about" onclick="showContent('about')">About</a>
+      <a href="#home" onclick="showContent('home')">Home</a>
+      <a href="#about" onclick="showContent('about')">About</a>
     </nav>
 
     <div class="container">
-        <div style="text-align: center;">
-            <img src="images/indonesia.jpg" alt="Gambar indonesia"  width="650" height="650">
-        </div>
-        
-        <!-- Home Content -->
-        <div id="home-content">
-            <h1>Berita Terkini</h1>
-            <div class="content">
-                <img src="images/meletus.jpg" alt="Gambar Berita">
-                <div>
-                    <h2> <a href="https://daerah.sindonews.com/read/1451787/174/gunung-lewotobi-laki-laki-erupsi-kolom-abu-capai-600-meter-1725840562" target="_blank"> Gunung Lewotobi Laki-laki Erupsi, Kolom Abu Capai 600 Meter</a></h2>
-                    <p>Gunung Api Lewotobi Laki-laki di Pulau Flores, Kabupaten Flores Timur, Nusa Tenggara Timur (NTT) dilaporkan mengalami erupsi pada Senin (9/9/2024) pagi. Erupsi terjadi sekitar pukul 06.11 WITA, dengan tinggi kolom letusan mencapai 600 meter di atas puncak gunung.Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG) melaporkan bahwa kolom abu berwarna kelabu dengan intensitas tebal terpantau bergerak ke arah barat daya dan barat. "Tinggi kolom letusan teramati sekitar 600 meter di atas puncak (sekitar 2184 meter di atas permukaan laut)," demikian pernyataan resmi dari PVMBG yang dikutip melalui situs magma.esdm.go.id.</p>
-                    <a href="detail1.html" target="_blank">Selengkapnya</a>
-                </div>
-            </div>
+      <div style="text-align: center">
+        <img src="images/indonesia.jpg" alt="Gambar indonesia" width="650" height="650" />
+      </div>
 
-            <div class="content">
-                <img src="images/longsor.jpeg" alt="Gambar Berita">
-                <div>
-                    <h2> <a href="https://www.detik.com/jabar/berita/d-7535373/longsor-putus-akses-penghubung-dua-kecamatan-di-garut" target="_blank"> Longsor Putus Akses Penghubung Dua Kecamatan di Garut</a></h2>
-                    <p>Bencana tanah longsor terjadi di Garut. Longsor ini berdampak terhadap putusnya akses transportasi, yang menghubungkan dua kecamatan di wilayah Garut Selatan. Longsor terjadi di Jalan Raya Peundeuy, Kampung Cinangsi, Desa Toblong, Kecamatan Peundeuy, Garut, pada Rabu (11/9/2024) pagi tadi. "Longsor terjadi sekitar jam 06.00 WIB. Tidak ada korban jiwa," kata Anas kepada detikJabar. Anas mengatakan, lokasi longsor berada persis di Jalan Raya Peundeuy. Tebing setinggi 20 meter dengan panjang 30 meter longsor dan materialnya menutup akses jalanan tersebut. </p>
-                    <a href="detail2.html" target="_blank">Selengkapnya</a>
-                </div>
-            </div>
-
-
+      <!-- Home Content -->
+      <div id="home-content">
+        <h1>Berita Terkini</h1>
+        <div class="content">
+          <img src="images/meletus.jpg" alt="Gambar Berita" />
+          <div>
+            <h2><a href="https://daerah.sindonews.com/read/1451787/174/gunung-lewotobi-laki-laki-erupsi-kolom-abu-capai-600-meter-1725840562" target="_blank"> Gunung Lewotobi Laki-laki Erupsi, Kolom Abu Capai 600 Meter</a></h2>
+            <p>
+              Gunung Api Lewotobi Laki-laki di Pulau Flores, Kabupaten Flores Timur, Nusa Tenggara Timur (NTT) dilaporkan mengalami erupsi pada Senin (9/9/2024) pagi. Erupsi terjadi sekitar pukul 06.11 WITA, dengan tinggi kolom letusan
+              mencapai 600 meter di atas puncak gunung.Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG) melaporkan bahwa kolom abu berwarna kelabu dengan intensitas tebal terpantau bergerak ke arah barat daya dan barat. "Tinggi kolom
+              letusan teramati sekitar 600 meter di atas puncak (sekitar 2184 meter di atas permukaan laut)," demikian pernyataan resmi dari PVMBG yang dikutip melalui situs magma.esdm.go.id.
+            </p>
+            <a href="detail1.html" target="_blank">Selengkapnya</a>
+          </div>
         </div>
 
-        <!-- About Content -->
-        <div id="about-content">
-            <h1>Tentang Kami</h1>
-            <p>Ini adalah website berita yang menyediakan informasi terbaru dan terkini dari berbagai sumber terpercaya.</p>
+        <div class="content">
+          <img src="images/longsor.jpeg" alt="Gambar Berita" />
+          <div>
+            <h2><a href="https://www.detik.com/jabar/berita/d-7535373/longsor-putus-akses-penghubung-dua-kecamatan-di-garut" target="_blank"> Longsor Putus Akses Penghubung Dua Kecamatan di Garut</a></h2>
+            <p>
+              Bencana tanah longsor terjadi di Garut. Longsor ini berdampak terhadap putusnya akses transportasi, yang menghubungkan dua kecamatan di wilayah Garut Selatan. Longsor terjadi di Jalan Raya Peundeuy, Kampung Cinangsi, Desa
+              Toblong, Kecamatan Peundeuy, Garut, pada Rabu (11/9/2024) pagi tadi. "Longsor terjadi sekitar jam 06.00 WIB. Tidak ada korban jiwa," kata Anas kepada detikJabar. Anas mengatakan, lokasi longsor berada persis di Jalan Raya
+              Peundeuy. Tebing setinggi 20 meter dengan panjang 30 meter longsor dan materialnya menutup akses jalanan tersebut.
+            </p>
+            <a href="detail2.html" target="_blank">Selengkapnya</a>
+          </div>
         </div>
+      </div>
+
+      <!-- About Content -->
+      <div id="about-content">
+        <h1>Tentang Kami</h1>
+        <p>Ini adalah website berita yang menyediakan informasi terbaru dan terkini dari berbagai sumber terpercaya.</p>
+      </div>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-        <h4>Link Rekomendasi</h4>
-        <a href="https://www.google.com" target="_blank">Google</a> | 
-        <a href="https://www.kompas.com" target="_blank">Kompas</a>
+      <h4>Link Rekomendasi</h4>
+      <a href="https://www.google.com" target="_blank">Google</a> |
+      <a href="https://www.kompas.com" target="_blank">Kompas</a>
     </div>
-
-</body>
+  </body>
 </html>
-
